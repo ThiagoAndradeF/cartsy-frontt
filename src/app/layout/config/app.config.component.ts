@@ -10,9 +10,13 @@ export class AppConfigComponent {
 
     @Input() minimal: boolean = false;
 
-    scales: number[] = [12, 13, 14, 15, 16];
+    scales: number[] = [12, 13, 14, 15, 16];    
+    themechoose:number = 2;
 
-    constructor(public layoutService: LayoutService, public menuService: MenuService) { }
+
+    constructor(public layoutService: LayoutService, public menuService: MenuService) {
+        this.changeThemeCartsy();
+     }
 
     get visible(): boolean {
         return this.layoutService.state.configSidebarVisible;
@@ -67,6 +71,18 @@ export class AppConfigComponent {
             this.layoutService.config.colorScheme = colorScheme;
             this.layoutService.onConfigUpdate();
         });
+    }
+
+    changeThemeCartsy(){
+
+          if (this.themechoose == 1) {
+            this.changeTheme('lara-light-purple', 'light');
+            this.themechoose=2;
+          } else {
+            this.changeTheme('lara-dark-purple', 'dark');
+            this.themechoose=1;
+          }
+        
     }
 
     replaceThemeLink(href: string, onComplete: Function) {
