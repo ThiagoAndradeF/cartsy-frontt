@@ -32,17 +32,4 @@ export class DashboardsRoutingModule {
         this.selectAll = value.length === this.totalRecords;
     }
 
-    // onSelectAllChange(event: any) {
-    //     const checked = event.checked;
-
-    //     if (checked) {
-    //         this.customerService.getCustomers().then((res) => {
-    //             this.selectedCustomers = res.customers;
-    //             this.selectAll = true;
-    //         });
-    //     } else {
-    //         this.selectedCustomers = [];
-    //         this.selectAll = false;
-    //     }
-    // }
 }

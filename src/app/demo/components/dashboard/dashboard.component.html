@@ -1,30 +1,43 @@
 <div class="card">
-    <p-table
+
+
+    <div class="body-button">
+        <p-button label="Entrega"></p-button>
+    </div>
+
+    <div class="body-button">
+        <p-button label="Retiradas"></p-button>
+    </div>
+
+    <div class="body-button">
+        <p-button label="Agendamento"></p-button>
+    </div>
+    
+    <!-- <p-columnFilter type="text" field="company"></p-columnFilter> -->
         
+                        
+
+    <p-table
         [lazy]="true"
         dataKey="id"
         [tableStyle]="{ 'min-width': '20rem' }"
-       
         [paginator]="true"
         [rows]="10"
-        
-        [globalFilterFields]="['name', 'country.name', 'company', 'representative.name']"
-    >
+        [globalFilterFields]="['name', 'country.name', 'company', 'representative.name']">
+
         <ng-template pTemplate="header">
             <tr>
                 <th style="width: 4rem"></th>
                 <th pSortableColumn="name">Pedido</th>
-                <th pSortableColumn="country.name"> Valor</th>
-                <th pSortableColumn="representative.name">Entrega</th>
-                
-                    <th style="width: 4rem">
-                    </th>
-                    <th>
-                        <p-columnFilter type="text" field="company"></p-columnFilter>
-                    </th>
-            </tr>
+                <th pSortableColumn="country.name">Valor</th>
+                <th pSortableColumn="representative.name">Entregas</th>
             
+                <th pSortableColumn="representative.name">Cliente</th>
+
+                    
+            </tr>
         </ng-template>
+
         <ng-template pTemplate="body" let-customer>
             <tr>
                 <td>
@@ -36,5 +49,7 @@
                 <td>{{ customer.representative.name }}</td>
             </tr>
         </ng-template>
+
     </p-table>
+
 </div>

@@ -1,0 +1,90 @@
+.button-apelo{
+    display: inline-block;
+            padding: 25px 70px; /* Ajuste o tamanho do botão aqui */
+            background-color: #FF5678; /* Cor de fundo do botão */
+            color: #000000; /* Cor do texto do botão */
+            font-size: 18px; /* Tamanho da fonte do texto */
+            border: none; /* Remove a borda */
+            border-radius: 20px; /* Borda arredondada */
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 27px;
+            border:  3px solid black;  
+            color: #fff;
+            margin-bottom: 20px
+}
+
+.button-apelo:hover {
+    // background-color: #3d3d3d; /* Cor de fundo do botão ao passar o mouse */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+    scale: 1.005;
+}
+.botaocad{
+    border-color: #f95991;
+    color: #f95991;
+    border-radius: 3px;
+    width: 130px;
+    height: 35px;
+    font-weight: bolder;
+    border-style: double;
+    padding: 2px;
+    margin-right: 20px;
+}
+.homeCard{
+    border-style: none;
+    color: #fff;
+    border-radius: 3px;
+    width: auto;
+    height: 30px;
+    font-weight: bolder;
+    padding: 3px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #0f0f0f;
+}
+
+:hover.homeCard, :hover.sobreCard{
+    transform: scale(1.05);
+    color: #ff2151;
+
+    .text-button{
+        transform: scale(1.05);
+        color: #F07D90;
+    }
+
+    .icon-button{
+        transform: scale(1.05);
+        color: #F07D90;
+    }
+}
+
+.sobreCard{
+    border-style: none;
+    color: #fff;
+    border-radius: 3px;
+    width: auto;
+    height: 30px;
+    font-weight: bolder;
+    padding: 3px;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: #0f0f0f;
+}
+
+:hover.botaocad{
+    transform: scale(1.05);
+    color: #ff64a5;
+    background-color: #252424b4;
+
+    .text-button{
+        transform: scale(1.05);
+        color: #F07D90;
+    }
+
+    .icon-button{
+        transform: scale(1.05);
+        color: #F07D90;
+    }
+}

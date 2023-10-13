@@ -4,7 +4,8 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
 
 @Component({
     selector: 'app-landing',
-    templateUrl: './landing.component.html'
+    templateUrl: './landing.component.html',
+    styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
 
