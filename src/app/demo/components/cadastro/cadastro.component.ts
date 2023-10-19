@@ -23,13 +23,13 @@ export class CadastroComponent {
   
   public avancarUmUndecimo(){
   console.log('avançando')
-  const novoValor = this.progresso + (100 / 11);
+  const novoValor = this.progresso + (100 / 9);
   novoValor <= 100 ? this.progresso = Math.round(novoValor) :  this.progresso = 100;
   }
 
   public retrocederUmUndecimo(){
   console.log('retrocedendo')
-  const novoValor = this.progresso - (100 / 11);
+  const novoValor = this.progresso - (100 / 9);
   this.progresso >= 0 ? this.progresso = Math.round(novoValor) : this.progresso = 0;
   }
 

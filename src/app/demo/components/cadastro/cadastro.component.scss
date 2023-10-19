@@ -27,7 +27,6 @@
         border-top: none;
         border-right: none;
         border-left: none;
-        border-radius: 5px;
     }
     textarea {
         resize: none;
@@ -65,6 +64,11 @@
             box-shadow: none;
             border-color: salmon;
            }
+           .p-button:enabled:hover{
+            box-shadow: none;
+             border-color: salmon;
+        }
+        
       }
     .progress-bar{
         // background-color: #f95991;
@@ -72,4 +76,5 @@
         margin-bottom: 200px;
 
     }
+    
 }
