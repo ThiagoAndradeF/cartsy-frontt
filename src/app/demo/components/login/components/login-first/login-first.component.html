@@ -1,0 +1,19 @@
+<div class="login-container">
+    <div class="logotipo">
+        <img src="assets/layout/images/cartsyLogo.png" alt="logo" style="width: 150px;">
+    </div>
+    <form >
+      <input type="email" formControlName="email" placeholder="Email">
+      <input type="password" formControlName="password" placeholder="Password">
+        
+    </form>
+    <a href="/forgot-password">Forgot password?</a>
+    <div class="login">
+      <p-button label="Log in"></p-button>
+    </div>
+    
+    <div class="inscricao">
+      <p-button label="Sign up" class="button-resgistro" (onClick)="redirectCadastro()"></p-button>
+    </div>
+    
+</div>

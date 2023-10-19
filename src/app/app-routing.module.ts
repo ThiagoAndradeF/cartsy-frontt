@@ -19,6 +19,8 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
             },
             // { path: 'auth', loadChildren: () => import('./demo/components/auth/auth.module').then(m => m.AuthModule) },
             { path: 'landing', loadChildren: () => import('./demo/components/landing/landing.module').then(m => m.LandingModule) },
+            { path: 'login', loadChildren: () => import('./demo/components/login/login.module').then(m => m.LoginModule) },
+            { path: 'cadastro', loadChildren: () => import('./demo/components/cadastro/cadastro.module').then(m => m.CadastroModule) },
             { path: 'notfound', component: NotfoundComponent },
             { path: '**', redirectTo: '/notfound' },
         ], { scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })

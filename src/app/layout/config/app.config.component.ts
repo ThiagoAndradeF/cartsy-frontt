@@ -11,7 +11,7 @@ export class AppConfigComponent {
     @Input() minimal: boolean = false;
 
     scales: number[] = [12, 13, 14, 15, 16];    
-    themechoose:number = 2;
+    themechoose:number = 1;
 
 
     constructor(public layoutService: LayoutService, public menuService: MenuService) {

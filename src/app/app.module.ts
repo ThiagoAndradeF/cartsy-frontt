@@ -11,6 +11,8 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
+import { LoginComponent } from './demo/components/login/login.component';
+import { CadastroComponent } from './demo/components/cadastro/cadastro.component';
 
 @NgModule({
     declarations: [

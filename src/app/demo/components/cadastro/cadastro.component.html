@@ -1,0 +1,28 @@
+<!-- <p-toast></p-toast> -->
+
+
+
+<div class="body-cadastro">
+    <div class="progress-bar">
+        <p-progressBar [value]="progresso"></p-progressBar>
+    </div>
+    
+    <div>
+        <div style="margin-bottom: 30px;">
+            <h4>
+                Qual o nome do seu negócio?
+            </h4>
+        </div>
+        <div>
+            <input type="text" pInputText [(ngModel)]="nomeLoja" class="input-area"/>
+        </div>
+        <div style="margin-top: 20px; display: flex; width: 100;align-items: center;  justify-content: center;" >
+            <p-button icon="pi pi-angle-up" (onClick)="retrocederUmUndecimo()"></p-button>
+            
+            <p-button icon="pi pi-angle-down" (onClick)="avancarUmUndecimo()"></p-button>
+        </div>
+    </div>
+    
+    
+        
+</div>

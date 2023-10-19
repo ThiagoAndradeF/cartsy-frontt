@@ -1,0 +1,75 @@
+:host{
+    .body-cadastro{
+        background-color: rgb(255, 243, 245);
+        width: 100%;
+        height: 100vh;
+        display:flex;
+        justify-content: top;
+        align-items: center;
+        flex-direction: column;
+    }
+    .centered-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      
+    
+    .input-cadastro{
+        width: 100%;
+    }
+    .input-area{
+        background-color: rgb(255, 243, 245);
+        width: 100%;
+        border-radius: 0;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-radius: 5px;
+    }
+    textarea {
+        resize: none;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        height: auto;
+      }
+      ::ng-deep {
+           .p-button{
+            background-color: black;
+            margin-right: 10px;
+           }
+           .p-button:hover{
+            background-color: salmon;
+            
+           }
+           .p-progressbar{ 
+            
+            height: 0.8em;
+            ::ng-deep {
+                .p-progressbar-value{
+                    background-color: salmon;
+                    font-size: 10px;
+                }
+            }
+           } 
+           .p-inputtext:enabled:hover{
+                border-color: salmon;
+           }
+           .p-inputtext:enabled:hover{
+                box-shadow: none;
+           }
+           .p-inputtext:enabled:focus{
+            box-shadow: none;
+            border-color: salmon;
+           }
+      }
+    .progress-bar{
+        // background-color: #f95991;
+        width: 100%;
+        margin-bottom: 200px;
+
+    }
+}

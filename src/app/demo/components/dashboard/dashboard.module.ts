@@ -22,7 +22,6 @@ import { DashboardsRoutingModule } from './dashboard-routing.module';
         PanelMenuModule,
         ButtonModule,
         DashboardsRoutingModule,
-
     ],
     declarations: [DashboardComponent]
 })
