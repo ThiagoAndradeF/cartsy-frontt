@@ -15,8 +15,8 @@
         height: 100vh;
         margin: 0;
       }
-      
-    
+
+
     .input-cadastro{
         width: 100%;
     }
@@ -27,6 +27,9 @@
         border-top: none;
         border-right: none;
         border-left: none;
+        font-size: 25px;
+        color: black;
+
     }
     textarea {
         resize: none;
@@ -36,16 +39,23 @@
         height: auto;
       }
       ::ng-deep {
+            .p-progressbar{
+                height: 2px;
+            }
            .p-button{
             background-color: black;
-            margin-right: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            font-size: 20px;
+            font-weight: bold;
+
            }
            .p-button:hover{
             background-color: salmon;
-            
+
            }
-           .p-progressbar{ 
-            
+           .p-progressbar{
+
             height: 0.8em;
             ::ng-deep {
                 .p-progressbar-value{
@@ -53,7 +63,7 @@
                     font-size: 10px;
                 }
             }
-           } 
+           }
            .p-inputtext:enabled:hover{
                 border-color: salmon;
            }
@@ -68,13 +78,18 @@
             box-shadow: none;
              border-color: salmon;
         }
-        
+
       }
     .progress-bar{
         // background-color: #f95991;
-        width: 100%;
+        width: 80%;
         margin-bottom: 200px;
 
+        margin-top:70px;
+        border-radius: 0px;
+
     }
-    
+
+
+
 }

@@ -6,23 +6,37 @@
     <div class="progress-bar">
         <p-progressBar [value]="progresso"></p-progressBar>
     </div>
-    
-    <div>
-        <div style="margin-bottom: 30px;">
-            <h4>
-                Qual o nome do seu negócio?
-            </h4>
-        </div>
+
+    <div style="width: 80%;max-width: 600px;">
+
         <div>
-            <input type="text" pInputText [(ngModel)]="nomeLoja" class="input-area"/>
+            <app-quest-one *ngIf="indexProgresso === 1"></app-quest-one>
+            <app-quest-two *ngIf="indexProgresso === 2"></app-quest-two>
+            <app-quest-three *ngIf="indexProgresso === 3"></app-quest-three>
+            <app-quest-four *ngIf="indexProgresso === 4"></app-quest-four>
+            <app-quest-five *ngIf="indexProgresso === 5"></app-quest-five>
+            <app-quest-six *ngIf="indexProgresso === 6"></app-quest-six>
+            <app-quest-seven *ngIf="indexProgresso === 7"></app-quest-seven>
+            <app-quest-eight *ngIf="indexProgresso === 8"></app-quest-eight>
         </div>
-        <div style="margin-top: 20px; display: flex; width: 100;align-items: center;  justify-content: center;" >
-            <p-button icon="pi pi-angle-up" (onClick)="retrocederUmUndecimo()"></p-button>
-            
-            <p-button icon="pi pi-angle-down" (onClick)="avancarUmUndecimo()"></p-button>
+
+
+        <div *ngIf="nomeLoja">
+            <div style="margin-top: 80px;" *ngIf="habilitaBotaoContinuar">
+                <p-button (onClick)="avancar()" class="proximo">
+                    Próximo
+                </p-button>
+            </div>
+
+            <div style="margin-top: 20%; display: flex; width: 100;align-items: right;  justify-content: center; width: 100%;justify-content: right;" >
+                <p-button icon="pi pi-angle-up" (onClick)="retroceder()" class="more-less" [disabled]="desabRetroceder"></p-button>
+
+                <p-button icon="pi pi-angle-down" (onClick)="avancar()" class="more-less" [disabled]="desabAvancar"></p-button>
+            </div>
         </div>
+
     </div>
-    
-    
-        
+
+
+
 </div>

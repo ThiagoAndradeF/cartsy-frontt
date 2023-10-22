@@ -1,0 +1,9 @@
+<div style="margin-bottom: 30px;">
+    <h2>
+        Adicione uma imagem do seu produto
+    </h2>
+    <div class="card flex justify-content-center">
+        <p-toast></p-toast>
+        <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+    </div>
+</div>

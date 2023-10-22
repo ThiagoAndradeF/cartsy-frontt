@@ -6,31 +6,49 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent {
-  nomeLoja:string;
+  nomeLoja:string = 'a';
+  desabAvancar:boolean = false;
+  desabRetroceder:boolean = true;
+  habilitaBotaoContinuar:boolean = true;
   constructor() { }
-  
-  private _progresso : number = 0;
+
+  private _progresso : number = 12.5;
   public get progresso() : number {
     return this._progresso;
   }
   public set progresso(v : number) {
-    if(v==99){
-      v=100
+    this.desabAvancar = false;
+    this.desabRetroceder = false;
+
+    if(v > 85 ){
+        this.desabAvancar = true;
+    }else if(v === 12.5 ){
+        this.desabRetroceder = true;
     }
+
     this._progresso = v;
- 
-  }
-  
-  public avancarUmUndecimo(){
-  console.log('avançando')
-  const novoValor = this.progresso + (100 / 9);
-  novoValor <= 100 ? this.progresso = Math.round(novoValor) :  this.progresso = 100;
   }
 
-  public retrocederUmUndecimo(){
-  console.log('retrocedendo')
-  const novoValor = this.progresso - (100 / 9);
-  this.progresso >= 0 ? this.progresso = Math.round(novoValor) : this.progresso = 0;
+  private _indexProgresso : number = 4;
+  public get indexProgresso() : number {
+    return this._indexProgresso;
+  }
+  public set indexProgresso(v : number) {
+    if(v === 3 || v === 1){
+        this.habilitaBotaoContinuar = true;
+    }else{
+        this.habilitaBotaoContinuar = false;
+    }
+    this.progresso = (v * 12.5)
+    this._indexProgresso = v;
+  }
+
+  public avancar(){
+    this.indexProgresso <= 7 ? this.indexProgresso++ : this.indexProgresso = 7;
+  }
+
+  public retroceder(){
+    this.indexProgresso >= 1 ? this.indexProgresso-- : this.indexProgresso = 1;
   }
 
 }
