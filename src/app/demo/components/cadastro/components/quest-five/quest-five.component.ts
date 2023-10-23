@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./quest-five.component.scss']
 })
 export class QuestFiveComponent {
-
+    public precoProduto:number;
 }

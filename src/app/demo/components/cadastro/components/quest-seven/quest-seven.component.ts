@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-quest-seven',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./quest-seven.component.scss']
 })
 export class QuestSevenComponent {
+
+    @Output() metodoEntrega = new EventEmitter<number>();
+    constructor(){}
+    emitirMetodoEntrega(value:number) {
+        this.metodoEntrega.emit(value);
+      }
 
 }

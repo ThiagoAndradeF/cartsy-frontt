@@ -1,1 +1,27 @@
-<p>quest-eight works!</p>
+<div >
+    <div style="margin-bottom: 30px;">
+        <h3>
+            Vocês cobram uma taxa de entrega?
+        </h3>
+    </div>
+    <div>
+        <div>
+            <p-button label="Sim, paga no pedido" (onClick)="cobrarEntrega(1)"></p-button>
+            <p-button label="Sim, paga na retirada do produto" (onClick)="cobrarEntrega(2)"></p-button>
+            <p-button label="Não" (onClick)="cobrarEntrega(3)"></p-button>
+        </div>
+    </div>
+    <div>
+        <p-inputNumber *ngIf="adicionarValor" [(ngModel)]="valorTaxaEntrega" inputId="currency-pt" mode="currency" currency="BRL" locale="pt-BR" mask="R$ 8"placeholder="R$ 8"> </p-inputNumber>
+    </div>
+</div>
+<!-- <div>
+    <div style="margin-top: 30px;">
+        <h3>
+            Quais são as instruções para pedidos de retirada?
+        </h3>
+    </div>
+    <div>
+        <input type="text" pInputText [(ngModel)]="instrucoesRetirada" class="input-area"/>
+    </div>
+</div> -->

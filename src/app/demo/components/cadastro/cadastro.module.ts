@@ -21,6 +21,9 @@ import { SplitterModule } from 'primeng/splitter';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ToastModule } from 'primeng/toast';
 import { FileUploadModule } from 'primeng/fileupload';
+import { MessageService } from 'primeng/api';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import { FileUploadModule } from 'primeng/fileupload';
     SplitterModule,
     OverlayPanelModule,
     ToastModule,
-    FileUploadModule
-  ]
+    FileUploadModule,
+    InputNumberModule,
+    InputMaskModule
+  ],
+  providers:[MessageService]
 })
 export class CadastroModule { }

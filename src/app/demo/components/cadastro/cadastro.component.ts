@@ -6,11 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent {
-  nomeLoja:string = 'a';
-  desabAvancar:boolean = false;
-  desabRetroceder:boolean = true;
-  habilitaBotaoContinuar:boolean = true;
-  constructor() { }
+  public nomeLoja:string = 'a';
+  public desabAvancar:boolean = false;
+  public desabRetroceder:boolean = true;
+  public habilitaBotaoContinuar:boolean = true;
+  public retirada:boolean;
+  public entrega:boolean;
+
+  private _metodoEntregaRecebido : number;
+  public get metodoEntregaRecebido() : number {
+    return this._metodoEntregaRecebido;
+  }
+  public set metodoEntregaRecebido(v : number) {
+    this._metodoEntregaRecebido = v;
+    // console.warn('O método de entrega é: ' + v)
+    this.definirMetodoEntrega(v);
+  }
 
   private _progresso : number = 12.5;
   public get progresso() : number {
@@ -20,7 +31,7 @@ export class CadastroComponent {
     this.desabAvancar = false;
     this.desabRetroceder = false;
 
-    if(v > 85 ){
+    if(v > 100 ){
         this.desabAvancar = true;
     }else if(v === 12.5 ){
         this.desabRetroceder = true;
@@ -29,7 +40,7 @@ export class CadastroComponent {
     this._progresso = v;
   }
 
-  private _indexProgresso : number = 4;
+  private _indexProgresso : number = 8;
   public get indexProgresso() : number {
     return this._indexProgresso;
   }
@@ -43,6 +54,8 @@ export class CadastroComponent {
     this._indexProgresso = v;
   }
 
+  constructor() { }
+
   public avancar(){
     this.indexProgresso <= 7 ? this.indexProgresso++ : this.indexProgresso = 7;
   }
@@ -50,5 +63,23 @@ export class CadastroComponent {
   public retroceder(){
     this.indexProgresso >= 1 ? this.indexProgresso-- : this.indexProgresso = 1;
   }
-
+  public definirMetodoEntrega( param:number){
+        switch(param){
+            case 1:
+                this.retirada = false;
+                this.entrega =  true;
+                break;
+            case 2:
+                this.retirada = true;
+                this.entrega =  false;
+                break;
+            case 3:
+                this.retirada = true;
+                this.entrega =  true;
+                break;
+        }
+    }
+    public receberMetodoEntrega(value: number) {
+        this.metodoEntregaRecebido = value;
+      }
 }

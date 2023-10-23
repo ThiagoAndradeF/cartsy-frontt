@@ -1,10 +1,33 @@
-.input-area{
-    background-color: rgb(255, 243, 245);
-    width: 100%;
-    border-radius: 0;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    font-size: 25px;
-    color: black;
+
+:host{
+    .input-area{
+        background-color: rgb(255, 243, 245);
+        width: 100%;
+        border-radius: 0;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-size: 25px;
+        color: black;
+    }
+    ::ng-deep{
+        .p-button{
+            width: 60vh;
+            height: 20vh;
+            background-color: rgb(255, 255, 255);
+            color:#ccc;
+            font-size: 3%;
+        }
+
+        .p-button:hover{
+            background-color: #ccc;
+            color: black;
+        }
+        .p-fileupload{
+            width: 100%;
+        }
+        .p-button-icon{
+            display: none;
+        }
+    }
 }

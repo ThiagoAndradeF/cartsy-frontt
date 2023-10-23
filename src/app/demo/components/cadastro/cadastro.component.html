@@ -16,8 +16,8 @@
             <app-quest-four *ngIf="indexProgresso === 4"></app-quest-four>
             <app-quest-five *ngIf="indexProgresso === 5"></app-quest-five>
             <app-quest-six *ngIf="indexProgresso === 6"></app-quest-six>
-            <app-quest-seven *ngIf="indexProgresso === 7"></app-quest-seven>
-            <app-quest-eight *ngIf="indexProgresso === 8"></app-quest-eight>
+            <app-quest-seven *ngIf="indexProgresso === 7" (metodoEntrega)= "receberMetodoEntrega($event)"></app-quest-seven>
+            <app-quest-eight *ngIf="indexProgresso === 8" [_entrega]= "entrega" [_retirada]= "retirada"></app-quest-eight>
         </div>
 
 
