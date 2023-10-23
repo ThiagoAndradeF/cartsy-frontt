@@ -1,0 +1,14 @@
+<div style="margin-bottom: 30px;">
+    <h3>
+        E por último, qual é o seu e-mail?
+    </h3>
+</div>
+<div>
+    <input type="text" pInputText [(ngModel)]="mailLoja" mask="Lojacartsy@gmail.com"  placeholder="Lojacartsy@gmail.com"class="input-area"/>
+</div>
+<div  *ngIf="!validadeEmail">
+    <h5 style="color: rgb(211, 27, 27);">Email inválido</h5>
+</div>
+<div  *ngIf="validadeEmail">
+    <h5 style="color: green;">Email válido</h5>
+</div>

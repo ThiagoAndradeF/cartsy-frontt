@@ -8,12 +8,10 @@ import { Component, Input } from '@angular/core';
 export class QuestEightComponent {
     @Input() _entrega: boolean = true;
     @Input() _retirada: boolean = true;
-
-
     valorTaxaEntrega : number;
     instrucoesRetirada: string;
     adicionarValor:boolean;
-
+    infoRetirada:string;
 
 
     cobrarEntrega(value:number){

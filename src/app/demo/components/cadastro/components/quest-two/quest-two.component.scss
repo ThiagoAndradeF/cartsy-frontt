@@ -1,5 +1,23 @@
 
 :host{
+    .image-card{
+        width: 30%;
+        min-height: 100%;
+         margin:0;
+         justify-content: center;
+          display: flex;
+    }
+    .options{
+        display:inline-block;
+        width: 45%;
+        margin: 5px;
+    }
+    .card:hover{
+        background-color: rgb(255, 206, 182);
+        border: 2px solid salmon;
+        color:black;
+        scale: 1;
+    }
     .input-area{
         background-color: rgb(255, 243, 245);
         width: 100%;
@@ -11,15 +29,6 @@
         color: black;
 
     }
-    .image{
-        width: 40%;
-        height: 100%;
-        display: inline-block;
-        background-color: black;
-    }
-    .descricao{
-        width: 60%;
-    }
     ::ng-deep{
         .p-card{
             width: 100%;
@@ -30,6 +39,9 @@
             margin: 0;
             padding-right: 5px;
         }
+        .image-card{
+            width: 15%;
+        }
 
     }
     .p-element{
@@ -39,15 +51,15 @@
 
     }
     @media (max-width: 768px) {
+        .options{
+            width: 100%;
+        }
         ::ng-deep{
             .p-card{
                 width: 100%;
             }
 
         }
-        // .p-element{
-        //     display: block;
-        // }
 
     }
 }
@@ -97,3 +109,4 @@
     transform: scale(1.1); /* Aumenta o botão quando pressionado */
     transition: transform 0.2s;
   }
+

@@ -24,38 +24,41 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { MessageService } from 'primeng/api';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
-
+import { QuestNineComponent } from './components/quest-nine/quest-nine.component';
+import { AnimateModule } from 'primeng/animate';
 
 @NgModule({
-  declarations: [
+    declarations: [
+        CadastroComponent,
+        QuestOneComponent,
+        QuestTwoComponent,
+        QuestThreeComponent,
+        QuestFourComponent,
+        QuestFiveComponent,
+        QuestSixComponent,
+        QuestSevenComponent,
+        QuestEightComponent,
+        QuestNineComponent
+    ],
+    imports: [
+      CommonModule,
+      RouterModule.forChild([{ path: '', component: CadastroComponent }]),
+      InputTextModule,
+      InputTextareaModule,
+      FormsModule,
+      ButtonModule,
+      ChipsModule,
+      ProgressBarModule,
+      CardModule,
+      SplitterModule,
+      OverlayPanelModule,
+      ToastModule,
+      FileUploadModule,
+      InputNumberModule,
+      InputMaskModule,
+      AnimateModule
 
-    CadastroComponent,
-     QuestOneComponent,
-     QuestTwoComponent,
-     QuestThreeComponent,
-     QuestFourComponent,
-     QuestFiveComponent,
-     QuestSixComponent,
-     QuestSevenComponent,
-     QuestEightComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([{ path: '', component: CadastroComponent }]),
-    InputTextModule,
-    InputTextareaModule,
-    FormsModule,
-    ButtonModule,
-    ChipsModule,
-    ProgressBarModule,
-    CardModule,
-    SplitterModule,
-    OverlayPanelModule,
-    ToastModule,
-    FileUploadModule,
-    InputNumberModule,
-    InputMaskModule
-  ],
-  providers:[MessageService]
-})
+    ],
+    providers:[MessageService]
+  })
 export class CadastroModule { }

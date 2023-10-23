@@ -1,12 +1,44 @@
 :host{
-    .body-cadastro{
-        background-color: rgb(255, 243, 245);
+    .elemento-fade-in {
+        opacity: 0; /* Comece com a opacidade definida como 0 (invisível) */
+        animation: fadeIn 1s ease-in forwards; /* Use a animação "fadeIn" com duração de 1 segundo */
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0; /* Comece com opacidade 0 */
+        }
+        to {
+          opacity: 1; /* Termine com opacidade 1 (totalmente visível) */
+        }
+      }
+    .arrow-buttons{
+        margin-top: 20%;
+        display: flex;
+        width: 100;
+        align-items: right;
+        justify-content: center;
         width: 100%;
-        height: 100vh;
+        justify-content: right;
+        position: fixed;
+        bottom: 50px;    /* Define a distância do fundo (pode ajustar conforme necessário) */
+         right: 10%;     /* Define a distância da direita (pode ajustar conforme necessário) */
+        z-index: 1;
+    }
+    .body-cadastro{
+        width: 100%;
+        height: auto;
         display:flex;
         justify-content: top;
         align-items: center;
         flex-direction: column;
+        background-color: rgb(255, 243, 245);
+        width: 100%;
+        height: 100vh;
+        // position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -100;
     }
     .centered-form-container {
         display: flex;
@@ -38,9 +70,19 @@
         overflow: hidden;
         height: auto;
       }
+      @media (max-width: 768px) {
+
+        .body-cadastro{
+            overflow: hidden;}
+
+
+
+
+    }
       ::ng-deep {
             .p-progressbar{
-                height: 2px;
+                height: 20px;
+
             }
            .p-button{
             background-color: black;
@@ -48,6 +90,13 @@
             padding-left: 20px;
             font-size: 20px;
             font-weight: bold;
+
+
+           }
+           .p-button .assign-form{
+            background-color: blue;
+        
+
 
            }
            .p-button:hover{
@@ -61,6 +110,9 @@
                 .p-progressbar-value{
                     background-color: salmon;
                     font-size: 10px;
+                }
+                .p-progressbar-label{
+                    color: salmon;
                 }
             }
            }
@@ -87,7 +139,9 @@
 
         margin-top:70px;
         border-radius: 0px;
-
+        @media (max-width: 768px) {
+            margin-bottom: 50px;
+        }
     }
 
 

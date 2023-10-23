@@ -1,4 +1,3 @@
-<!-- <p-toast></p-toast> -->
 
 
 
@@ -10,25 +9,33 @@
     <div style="width: 80%;max-width: 600px;">
 
         <div>
-            <app-quest-one *ngIf="indexProgresso === 1"></app-quest-one>
-            <app-quest-two *ngIf="indexProgresso === 2"></app-quest-two>
-            <app-quest-three *ngIf="indexProgresso === 3"></app-quest-three>
-            <app-quest-four *ngIf="indexProgresso === 4"></app-quest-four>
-            <app-quest-five *ngIf="indexProgresso === 5"></app-quest-five>
-            <app-quest-six *ngIf="indexProgresso === 6"></app-quest-six>
-            <app-quest-seven *ngIf="indexProgresso === 7" (metodoEntrega)= "receberMetodoEntrega($event)"></app-quest-seven>
-            <app-quest-eight *ngIf="indexProgresso === 8" [_entrega]= "entrega" [_retirada]= "retirada"></app-quest-eight>
+            <app-quest-one *ngIf="indexProgresso === 1" class="elemento-fade-in"></app-quest-one>
+            <app-quest-two *ngIf="indexProgresso === 2" class="elemento-fade-in"></app-quest-two>
+            <app-quest-three *ngIf="indexProgresso === 3" class="elemento-fade-in"></app-quest-three>
+            <app-quest-four *ngIf="indexProgresso === 4" class="elemento-fade-in"></app-quest-four>
+            <app-quest-five *ngIf="indexProgresso === 5" class="elemento-fade-in"></app-quest-five>
+            <app-quest-six *ngIf="indexProgresso === 6" class="elemento-fade-in"></app-quest-six>
+            <app-quest-seven *ngIf="indexProgresso === 7" (metodoEntrega)= "receberMetodoEntrega($event)" class="elemento-fade-in"></app-quest-seven>
+            <app-quest-eight *ngIf="indexProgresso === 8" [_entrega]= "entrega" [_retirada]= "retirada" class="elemento-fade-in"></app-quest-eight>
+            <app-quest-nine *ngIf="indexProgresso === 9" class="elemento-fade-in"></app-quest-nine>
         </div>
 
 
-        <div *ngIf="nomeLoja">
+        <div >
             <div style="margin-top: 80px;" *ngIf="habilitaBotaoContinuar">
                 <p-button (onClick)="avancar()" class="proximo">
                     Próximo
                 </p-button>
             </div>
 
-            <div style="margin-top: 20%; display: flex; width: 100;align-items: right;  justify-content: center; width: 100%;justify-content: right;" >
+
+            <p-button icon="pi pi-angle-up" (onClick)="retroceder()" class="assign-form"  *ngIf="desabAvancar" >
+
+                Continuar para a plataforma
+            </p-button>
+
+
+            <div  class="arrow-buttons">
                 <p-button icon="pi pi-angle-up" (onClick)="retroceder()" class="more-less" [disabled]="desabRetroceder"></p-button>
 
                 <p-button icon="pi pi-angle-down" (onClick)="avancar()" class="more-less" [disabled]="desabAvancar"></p-button>
@@ -36,7 +43,7 @@
         </div>
 
     </div>
-
-
-
 </div>
+
+
+

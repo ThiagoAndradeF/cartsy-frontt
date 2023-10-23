@@ -1,5 +1,11 @@
 
 :host{
+    .upload-body{
+        display: block;
+        justify-content: center;
+        width: 100%;
+        // margin-left: 10%;
+    }
     .input-area{
         background-color: rgb(255, 243, 245);
         width: 100%;
@@ -12,11 +18,11 @@
     }
     ::ng-deep{
         .p-button{
-            width: 60vh;
+            width: 80%;
             height: 20vh;
             background-color: rgb(255, 255, 255);
-            color:#ccc;
-            font-size: 3%;
+            color: #ccc;
+            font-size: 5vh;
         }
 
         .p-button:hover{

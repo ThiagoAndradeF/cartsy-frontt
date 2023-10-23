@@ -12,18 +12,22 @@ export class CadastroComponent {
   public habilitaBotaoContinuar:boolean = true;
   public retirada:boolean;
   public entrega:boolean;
+  public emailLoja: string;
+  public habFormulario: boolean =  false;
+
 
   private _metodoEntregaRecebido : number;
   public get metodoEntregaRecebido() : number {
+
     return this._metodoEntregaRecebido;
   }
   public set metodoEntregaRecebido(v : number) {
     this._metodoEntregaRecebido = v;
-    // console.warn('O método de entrega é: ' + v)
+    console.warn('O método de entrega selecionado foi ' + v)
     this.definirMetodoEntrega(v);
   }
 
-  private _progresso : number = 12.5;
+  private _progresso : number = 10;
   public get progresso() : number {
     return this._progresso;
   }
@@ -31,16 +35,15 @@ export class CadastroComponent {
     this.desabAvancar = false;
     this.desabRetroceder = false;
 
-    if(v > 100 ){
+    if(v >= 90 ){
         this.desabAvancar = true;
-    }else if(v === 12.5 ){
+    }else if(v === 10){
         this.desabRetroceder = true;
     }
-
     this._progresso = v;
   }
 
-  private _indexProgresso : number = 8;
+  private _indexProgresso : number =1;
   public get indexProgresso() : number {
     return this._indexProgresso;
   }
@@ -50,18 +53,19 @@ export class CadastroComponent {
     }else{
         this.habilitaBotaoContinuar = false;
     }
-    this.progresso = (v * 12.5)
+    this.progresso = (v * 10)
     this._indexProgresso = v;
+
   }
 
   constructor() { }
 
   public avancar(){
-    this.indexProgresso <= 7 ? this.indexProgresso++ : this.indexProgresso = 7;
+    this.indexProgresso <= 8 ? this.indexProgresso++ : this.indexProgresso = 9;
   }
 
   public retroceder(){
-    this.indexProgresso >= 1 ? this.indexProgresso-- : this.indexProgresso = 1;
+    this.indexProgresso > 1 ? this.indexProgresso-- : this.indexProgresso = 1;
   }
   public definirMetodoEntrega( param:number){
         switch(param){
@@ -79,7 +83,11 @@ export class CadastroComponent {
                 break;
         }
     }
+
+
     public receberMetodoEntrega(value: number) {
         this.metodoEntregaRecebido = value;
-      }
+        }
+
+
 }
